@@ -12,6 +12,6 @@ The scripts in this repository are meant to:
 
 I ran steps 1 and 2 locally on my Macbook, uploaded the folders with sorted image patches as ZIP file to Google Drive and then ran steps 3 and 4 in Google Colab. Also the input images for step 4 are saved and directly processed on Google Drive.
   
-![overview](https://github.com/sebastiantonn/phd/assets/90251517/5e3700d3-cd66-4a57-9794-fbdab014d5c0)
+<img width="1459" alt="overview" src="https://github.com/sebastiantonn/phd/assets/90251517/2ef4e045-faea-4097-9d68-228ee0486f23">
 
 
