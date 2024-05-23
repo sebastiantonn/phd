@@ -1,8 +1,4 @@
-# File name: image-prep.py
-# Project: trypan-blue-lettuce-CNN
-
 # Author: Andrew Pape
-# Guido van den Ackervecken Lab
 # Plant-Microbe Interactions Group
 # Universiteit Utrecht
 
