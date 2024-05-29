@@ -10,7 +10,12 @@ The scripts in this repository are meant to:
 * train and test a convolutional neural network (03_train-test.ipynb)
 * apply the trained convolutional neural network to classify 400 x 400 pixel patches in new leaf disc images (04_deploy.ipynb)
 
-I ran steps 1 and 2 locally on my Macbook, uploaded the folders with sorted image patches as ZIP file to Google Drive and then ran steps 3 and 4 in Google Colab. Also the input images for step 4 are saved and directly processed on Google Drive.
+(See overview figure below)
+
+I ran steps 1 and 2 locally on my Macbook, uploaded the folders with sorted image patches as ZIP file to Google Drive and then ran steps 3 and 4 in Google Colab. Also the input images for step 4 are saved on Google Drive and directly via Google Colab.
+
+Andrew Pape wrote the first versions of above scripts during his MSc thesis project at the Plant-Microbe Interactions group, Utrecht University.
+I later adapted the scripts to the current versions.
   
 <img width="1459" alt="overview" src="https://github.com/sebastiantonn/phd/assets/90251517/2ef4e045-faea-4097-9d68-228ee0486f23">
 
