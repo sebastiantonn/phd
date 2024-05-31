@@ -1,6 +1,6 @@
 # Microscopic image analysis of lettuce downy mildew infection using a convolutional neural network
 
-## This repository contains all the scripts used to process the images and generate the data presented in chapter 3 of my PhD thesis.
+### This repository contains all the scripts used to process the images and generate the data presented in chapter 3 of my PhD thesis.
 
 Using a Zeiss Axiozoom microscope and the Zeiss Zen Blue software we generated high resolution images (e.g. ca. 15,000 pixels diameter) of trypan blue stained lettuce leaf discs (1 cm diameter) infected with downy mildew. The details are described in the thesis.
 The scripts in this repository are meant to:
