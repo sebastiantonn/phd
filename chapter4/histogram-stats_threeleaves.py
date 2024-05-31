@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct  7 13:26:28 2022
-
-@author: Sebastian Tonn, based on script by Mon-Ray Shao
+@author: Sebastian Tonn and Mon-Ray Shao
 Institute: Utrecht University
-Department: Plant Microbe Interactions
+Group: Translational Plant Biology
 Lab: Guido van den Ackerveken
 """
 
 ### This script takes images made with the TUD imager, corrects brightness with reference image,
-### sets everything on the right of a defined x coordinate to black/0, segments the leaves, and generates histogram statistics.
-### It is meant for images of single leaves taken using the "Otto-plant-holder",
-### where we only want to get information from the one isolated leaf, but some parts of the rest of the plant are still
-### in the image on the right hand side and have to be "cut" out.
-### 
+### segments the leaves or plants, and generates histogram statistics.
+### It is meant for images of single leaves or plants as all segmented objects will be analyzed together.
+### The histogram statistics are saved in two CSV files (one for UV images, one for white light images).
+### Additionally, for visualization the script saves the segmented leaf images (both UV and WL) for visualization.
+### There are several optional arguments to adjust the output, see descriptions below.
 
 ### Load packages
 from PIL import Image
@@ -200,7 +198,7 @@ def main():
                 # Create WL-RGB image with unaltered channels for visualization
                 WL_RGB = np.dstack([WL_BP660, WL_BP540, WL_BP470])
                 
-                # Segment plant(s) and write to file for both UV and WL RGB images
+                # Segment and separate individual leaves
                 ret, mask = cv2.threshold(UV_BP695, 0, 255, cv2.THRESH_OTSU)
                 if args.erosion:
                     erode = args.erosion.split(',')
@@ -212,11 +210,11 @@ def main():
                 	mask, 4, cv2.CV_32S)
                 (numLabels, labels, stats, centroids) = output_cc
                 
-                # Make selection array with TRUE for all the areas that are larger than 700 pixels
+                # Make selection array with TRUE for all the areas that are larger than n pixels
                 # batch 1, 2 and 3: 3650, batch4: 2000
                 selection = stats[:, cv2.CC_STAT_AREA] > 2000
                 
-                # Get centroid x position of all connected components that are larger than 700
+                # Get centroid x position of all connected components that are larger than n pixels
                 cX = centroids[selection, 0]
                 
                 # Get centroid x position of most left component (min) and of most right component (max)
