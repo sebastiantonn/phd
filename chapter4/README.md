@@ -6,7 +6,7 @@
 The UV-fluorescence images were analysed in two different ways:
 
 1. Image histogram statistics to quantify color variation with
-- histogram-stats_singleleaf.py for the images from the QTL mapping experiment
+- histogram-stats_threeleaves.py for the images from the QTL mapping experiment
 - histogram-stats_singleleaf.py for the time-series images and the experiment comparing image-based quantification with qPCR.
 
 2. U-NET semantic segmentation to quantify blue-green fluorescent area with
