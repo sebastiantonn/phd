@@ -11,7 +11,7 @@ Lab: Guido van den Ackerveken
 ### segments the leaves or plants, and generates histogram statistics.
 ### It is meant for images of single leaves or plants as all segmented objects will be analyzed together.
 ### The histogram statistics are saved in two CSV files (one for UV images, one for white light images).
-### Additionally, for visualization the script saves the segmented leaf images (both UV and WL) for visualization.
+### Additionally, for visualization the script saves the segmented leaf images (both UV and WL).
 ### There are several optional arguments to adjust the output, see descriptions below.
 
 ### Load packages
