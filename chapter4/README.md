@@ -3,6 +3,7 @@
 ### This repository contains the scripts used to process the images and generate the data presented in chapter 4 of my PhD thesis.
 
 UV-fluorescence and white light images were captured in the TUD imaging cabinet, which was controled with the script _TUD_imager.py_.
+Example images can be found in exampel_images.zip.
 The images were processed and analysed in two different ways:
 
 1. Image histogram statistics to quantify color variation with
