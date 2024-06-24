@@ -7,9 +7,9 @@ Group: Translational Plant Biology
 Lab: Guido van den Ackerveken
 """
 
-### This script takes images made with the TUD imager, corrects brightness with reference image,
-### segments the leaves or plants, and generates histogram statistics.
-### It is meant for images of single leaves or plants as all segmented objects will be analyzed together.
+### This script takes images made with the TUD imager during the QTL mapping experiment. 
+### It is meant for images that contain up to three individual detached leaves of a single plant, arranged from left to right.
+### It segments each leaf in the image individually, corrects brightness with reference image, and generates histogram statistics per leaf.
 ### The histogram statistics are saved in two CSV files (one for UV images, one for white light images).
 ### Additionally, for visualization the script saves the segmented leaf images (both UV and WL).
 ### There are several optional arguments to adjust the output, see descriptions below.
